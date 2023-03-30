@@ -33,7 +33,8 @@ df['item'] = df['item'].str.replace('Reassembly ','Reassembly')
 
 app = dash.Dash(__name__, prevent_initial_callbacks=True)
 server = app.server
-
+app:app
+    
 app.layout = html.Div([
     html.Br(),
     html.Div(id='gantt-container'),

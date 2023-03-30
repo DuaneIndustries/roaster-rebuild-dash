@@ -1,3 +1,3 @@
 # roaster-rebuild-dash
 
-['Link To Dashboard'](https://rebuild-budget.onrender.com)
+[View Dashboard Here.](https://rebuild-budget.onrender.com)

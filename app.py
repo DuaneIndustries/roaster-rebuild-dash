@@ -44,7 +44,7 @@ app.layout = html.Div([
 
     #html.H3("Project Section"),
     html.Div(children=[
-        section_drop := dcc.Dropdown([x for x in sorted(df['Project Section'].unique())],
+        dcc.Dropdown([x for x in sorted(df['Project Section'].unique())],
                               value=[],
                              clearable=False,
                              multi=True,
@@ -56,7 +56,7 @@ app.layout = html.Div([
                  style={'width': '35%'},
                  id='labmat-dropdown'),
         ], style={'display': 'flex'}),
-    my_table := dash_table.DataTable(
+    dash_table.DataTable(
             id='datatable-interactivity',
             columns=[
                 {"name": i, "id": i, "deletable": False, "selectable": True, "hideable": True}
@@ -96,7 +96,7 @@ app.layout = html.Div([
 
 #table filtering via dropdown menus
 @app.callback(
-    Output(my_table,'data'),
+    Output('datatable-interactivity','data'),
     Input('labmat-dropdown','value'),
     Input('section-dropdown','value')
 
